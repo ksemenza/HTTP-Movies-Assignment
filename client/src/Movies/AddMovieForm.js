@@ -36,26 +36,28 @@ const AddMovieForm = props => {
     }
     
     return (
-        <div>
+        <div className='movie-add-cta'>
+        <div className='movie-add-cta'>
             <h2>Add Movie</h2>
+            </div>
             <form id='movie-form'  onSubmit={handleSubmit}>
-                <label htmlFor='title'>Title: </label>
-                <input type='text' name='title' value={movieInput.title} onChange={handleChange}  /><br />
+                <label htmlFor='title'/>
+                <input type='text' name='title' value={movieInput.title} onChange={handleChange} placeholder='Title'  /><br />
 
-                <label htmlFor='director'>Director: </label>
-                <input type='text' name='director' value={movieInput.director} onChange={handleChange} /><br />
+                <label htmlFor='director'/>
+                <input type='text' name='director' value={movieInput.director} onChange={handleChange} placeholder='Director'/><br />
 
-                <label htmlFor='metascore'>Metascore: </label>
-                <input type='number' name='metascore' value={movieInput.metascore} onChange={handleChange} /><br />
+                <label htmlFor='metascore'/>
+                <input type='number' name='metascore' value={movieInput.metascore} onChange={handleChange} placeholder='Metascore' /><br />
             
-                <label htmlFor='star0'>Star: </label>
-                <input type='text' name='star0' value={movieInput.star0} onChange={handleChange} /><br />
+                <label htmlFor='star0'/>
+                <input type='text' name='star0' value={movieInput.star0} onChange={handleChange} placeholder='Star' /><br />
 
-                <label htmlFor='star1'>Star: </label>
-                <input type='text' name='star1' value={movieInput.star1} onChange={handleChange} /><br />
+                <label htmlFor='star1'/>
+                <input type='text' name='star1' value={movieInput.star1} onChange={handleChange} placeholder='Co-Star' /><br />
 
-                <label htmlFor='star2'>Star: </label>
-                <input type='text' name='star2' value={movieInput.star2} onChange={handleChange} /><br />
+                <label htmlFor='star2'/>
+                <input type='text' name='star2' value={movieInput.star2} onChange={handleChange} placeholder='Supportive Role' /><br />
 
                 <button onSubmit={resetForm} type='submit'>Save</button>
             </form>
