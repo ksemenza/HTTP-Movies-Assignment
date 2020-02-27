@@ -1,3 +1,8 @@
+* {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,10 +10,14 @@ body {
   background-color: #f2f2f2;
   text-align: center;
   text-align: center;
+  background-color: #DA2D2D;
 }
-
-
-
+.appTitle {
+  background-color: white;
+  width: 77%;
+  margin: 0.8rem auto;
+  padding: 1.2rem 0;
+}
 .movie-card {
   background-color: #fff;
   border: 0;
@@ -60,56 +69,55 @@ body {
 }
 .save-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 75%;
+
   margin: 1rem auto;
 }
 
-.save-button {
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.save-button, .delete-button, .edit-button {
   top: 25px;
   right: 25px;
-  border: 1px solid grey;
+  border: 1px solid #EB8242;
   padding: 5px 10px;
-  background-color: lightseagreen;
+  background-color: #F6DA63;
   width: 5rem;
+  height: 1.2rem;
   text-align: center;
   padding: 0.4rem 0;
+  cursor: pointer;
 }
-.delete-button {
-  top: 25px;
-  right: 25px;
-  border: 1px solid grey;
-  padding: 5px 10px;
-  background-color: lightseagreen;
-  width: 5rem;
-  text-align: center;
-  padding: 0.4rem 0;
-}
+
 .edit-button {
-  top: 25px;
-  right: 25px;
-  border: 1px solid grey;
-  padding: 5px 10px;
-  background-color: lightseagreen;
-  width: 5rem;
-  text-align: center;
-  padding: 0.4rem 0;
+  margin: 0 2.5rem;
 }
-.save-button:hover {
-  background-color: green;
+
+.save-button:hover, .delete-button:hover, .edit-button:hover {
+  background-color: #EB8242;
   color: white;
 }
-.delete-button:hover {
-  background-color: green;
+
+.home:hover, .add:hover {
   color: white;
 }
-.edit-button:hover {
-  background-color: green;
-  background-color: green;
-  color: white;
+
+.home-button, .add-button {
+  width: 150px;
+  padding: 15px 15px;
+  background-color: #F6DA63;
+  font-size: 1.6rem;
+  border: 1px outset wheat;
 }
-.home-button {
-  padding: 5px 10px;
-  background-color: lightskyblue;
+
+.home-button:hover, .add-button:hover {
+  background-color: #EB8242;
+  color: white;
 }
 
 .movie-warning {
@@ -120,17 +128,24 @@ body {
 .card-right {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 150px;
 }
 
 .card-left {
   display: flex;
   flex-direction: column;
-
+  justify-content: space-evenly;
+  width: 350px;
 }
 
 h2 {
   width: 250px;
+
+}
+
+.movie-director{
+  margin-bottom: 0.5rem;
 }
 
 .saved-list-top {

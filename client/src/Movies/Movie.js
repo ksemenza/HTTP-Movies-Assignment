@@ -38,7 +38,7 @@ export default class Movie extends React.Component {
   }
 
   deleteMovie = () => {
-    console.log('Time to delete movie ' + this.state.movie.id);
+    console.log(this.state.movie);
     axios.delete(`http://localhost:5000/api/movies/${this.state.movie.id}`)
       .then(res => {
         console.log(res);
@@ -57,14 +57,16 @@ export default class Movie extends React.Component {
     return (
       <div className="save-wrapper">
         <MovieCard movie={this.state.movie} />
+        <div className='btn-wrap'>
         <div className="save-button" onClick={this.saveMovie}>
-          Save
+          Add
         </div>
         <div className='edit-button' onClick={this.editMovie}>
           Edit 
         </div>
         <div className='delete-button' onClick={this.deleteMovie}>
           Delete 
+        </div>
         </div>
       </div>
     );
