@@ -17,23 +17,30 @@ const AddMovieForm = props => {
         starArray.push(movieInput.star2);
         //console.log(starArray);
         const movieToSubmit = {title: movieInput.title, director: movieInput.director, metascore: movieInput.metascore, stars: starArray};
+    
         console.log(movieToSubmit);
         axios.post('http://localhost:5000/api/movies', movieToSubmit)
             .then(res => {
                 console.log(res);
+          
                 props.history.push('/');
+            
             })
             .catch(err => {
                 console.log(err);
             })
     }
+
+    const resetForm = () => {
+            document.getElementById('movie-form').reset()
+    }
     
     return (
         <div>
             <h2>Add Movie</h2>
-            <form onSubmit={handleSubmit}>
+            <form id='movie-form'  onSubmit={handleSubmit}>
                 <label htmlFor='title'>Title: </label>
-                <input type='text' name='title' value={movieInput.title} onChange={handleChange} /><br />
+                <input type='text' name='title' value={movieInput.title} onChange={handleChange}  /><br />
 
                 <label htmlFor='director'>Director: </label>
                 <input type='text' name='director' value={movieInput.director} onChange={handleChange} /><br />
@@ -50,7 +57,7 @@ const AddMovieForm = props => {
                 <label htmlFor='star2'>Star: </label>
                 <input type='text' name='star2' value={movieInput.star2} onChange={handleChange} /><br />
 
-                <button type='submit'>Submit Movie</button>
+                <button onSubmit={resetForm} type='submit'>Save</button>
             </form>
         </div>
     )

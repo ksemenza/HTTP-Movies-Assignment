@@ -41,6 +41,8 @@ const UpdateMovieForm = props => {
             })
     }
 
+ 
+ 
     return (
         <div>
             <h2>Edit Movie</h2>
@@ -63,7 +65,7 @@ const UpdateMovieForm = props => {
                 <label htmlFor='star2'>Star: </label>
                 <input type='text' name='star2' value={movieInput.star2} onChange={handleChange} /><br />
 
-                <button type='submit'>Submit Changes</button>
+                <button type='submit'>Save</button>
             </form>
         </div>
     )
